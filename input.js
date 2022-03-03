@@ -36,13 +36,7 @@ const handleUserInput = function (key)  {
       interval(RIGHTKEY);
     }
     if (key === "h") {
-      connection.write(msg + hello);
-    }
-    if (key === "j") {
-      connection.write(msg + stay);
-    }
-    if (key === 'k') {
-      connection.write(msg + listen);
+      connection.write(msg + bonjour);
     }
   };
 };
