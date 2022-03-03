@@ -4,7 +4,7 @@ let connection;
 
 const msg = "Say: ";
 const greeting = "Bonjour! ca va?";
-const simrun = "Simrun is beautiful!"
+const simrun = "Keep it up!"
 
 
 const setupInput = function (conn) {
