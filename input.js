@@ -1,3 +1,10 @@
+const { UPKEY, LEFTKEY, DOWNKEY, RIGHTKEY } = require('./constants.js');
+
+let connection;
+
+const msg = "Say: ";
+const hello = "Bonjour! ca va?";
+
 const setupInput = function () {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -36,7 +43,7 @@ const handleUserInput = function (key)  {
       interval(RIGHTKEY);
     }
     if (key === "h") {
-      connection.write(msg + bonjour);
+      connection.write(msg + greeting);
     }
   };
 };
