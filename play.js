@@ -1,10 +1,7 @@
-
 const conn = require('./client');
-const conn = connect();
-
-const conn = connect();
+const connect = conn
 
 console.log("Connecting ...");
-connect();
+
 
 module.exports = conn;
