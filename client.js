@@ -1,3 +1,6 @@
+const { UPKEY, LEFTKEY, DOWNKEY, RIGHTKEY } = require('./constants.js');
+
+
 const net = require('net');
 const conn = require('./play');
 
@@ -21,4 +24,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = conn;
+module.exports = { conn };
