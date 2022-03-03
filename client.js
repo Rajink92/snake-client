@@ -1,13 +1,11 @@
-const { UPKEY, LEFTKEY, DOWNKEY, RIGHTKEY } = require('./constants.js');
-
 
 const net = require('net');
-const conn = require('./play');
+const { IP, PORT } = require('./constants');
 
-const connect = function () {
+const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   conn.setEncoding("utf8");
@@ -24,4 +22,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = { conn };
+module.exports = { connect };
