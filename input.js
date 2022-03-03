@@ -1,9 +1,13 @@
 const { UPKEY, LEFTKEY, DOWNKEY, RIGHTKEY } = require('./constants.js');
 
-const msg = "Say: ";
-const hello = "Bonjour! ca va?";
+let connection; 
 
-const setupInput = function () {
+
+const msg = "Say: ";
+const greeting = "Bonjour! ca va?";
+
+const setupInput = function (conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -13,12 +17,14 @@ const setupInput = function () {
   return stdin;
 });
 
-const handleUserInput = function (key)  {
+let func;
+
+const handleUserInput = (key) => {
   const stdout = process.stdout;
   const interval = function(key) {
     func = setInterval(() => {
       connection.write(key);
-    }, 100);
+    }, 50);
     };
     if (key === '\u0003') {
       stdout.write("Exit Snake game!.\n");
