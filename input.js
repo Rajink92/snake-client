@@ -1,7 +1,5 @@
 const { UPKEY, LEFTKEY, DOWNKEY, RIGHTKEY } = require('./constants.js');
 
-let connection;
-
 const msg = "Say: ";
 const hello = "Bonjour! ca va?";
 
