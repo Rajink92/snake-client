@@ -3,7 +3,7 @@ const conn = require('./play');
 
 const connect = function () {
   const conn = net.createConnection({
-    host: '192.168.50.2',
+    host: 'localhost',
     port: 50541
   });
 
